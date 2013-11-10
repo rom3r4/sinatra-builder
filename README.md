@@ -1,4 +1,3 @@
-sinatra-builder
-===============
+### sinatra-builder
 
-A lightweight Sinatra Build script
+A lightweight Sinatra skeleton build script
