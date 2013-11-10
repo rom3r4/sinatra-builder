@@ -1,11 +1,13 @@
 #!/bin/sh
 
+RVM=`which rvm`
+
 if [ "x${1}" = "x" ];then
   echo "${0} <project-name>"
   exit 1
 fi
 
-if [ -f "$1" || -d "$1" ];then
+if [ -f "$1" ] || [ -d "$1" ];then
   echo "${1} already exists"
   exit 1
 fi
@@ -20,7 +22,7 @@ touch ${1}/app.rb ${1}/config.ru ${1}/Gemfile
 
 cat <<EOT >${1}/Gemfile
 # Gemfile
-source :rubygems
+source "https://rubygems.org"
  
  gem "sinatra"
  gem "haml"
@@ -59,10 +61,13 @@ cat <<EOT >${1}/views/index.haml
   %head
     %title My title
       %body
-
+EOT
 
 echo "Creating bundle.."                 
 cd $1
-rvm all do bundle install
-
+if [ "x$RVM" = "x" ];then
+  bundle install
+else
+  rvm all do bundle install
+fi
 echo "run 'rackup' to start your app"
