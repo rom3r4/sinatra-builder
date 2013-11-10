@@ -1,11 +1,11 @@
 ### [sinatra-builder](#)
 
-A lightweight Sinatra skeleton build script
+A lightweight Sinatra skeleton builder script
 
 ### Install
 
     curl -O https://raw.github.com/julianromerajuarez/sinatra-builder/master/build.sh  
-    chmod u+x build.sh && ./build.sh <directory>
+    chmod u+x build.sh && ./build.sh __INSTALLATION_DIRECTORY__
 
 ### Structure
 
