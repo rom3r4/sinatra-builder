@@ -1,6 +1,6 @@
 ### [sinatra-builder](#)
 
-A lightweight Sinatra skeleton builder script
+A lightweight Sinatra skeleton builder
 
 ### Install
 
