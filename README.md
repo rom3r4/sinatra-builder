@@ -4,7 +4,7 @@ A lightweight Sinatra skeleton builder
 
 ### Install
 
-    curl -O https://raw.github.com/julianromerajuarez/sinatra-builder/master/build.sh  
+    curl -O https://raw.github.com/julianromera/sinatra-builder/master/build.sh  
     chmod u+x build.sh && ./build.sh __INSTALL_DIRECTORY__
 
 ### Structure
